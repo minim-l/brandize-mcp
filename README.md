@@ -1,7 +1,8 @@
 # Brandize MCP server
 
 Hosted MCP server for [Brandize](https://brandize.me), an AI logo generator.
-It generates logos, brand color palettes, SEO meta tags, and JSON-LD schema
+It generates logos and full brand kits — lockups, favicons, social assets,
+print collateral — plus brand color palettes, SEO meta tags, and JSON-LD schema
 markup, and searches the Brandize design guides.
 
 There is nothing to install. The server is remote and runs over streamable HTTP:
@@ -67,14 +68,30 @@ No card is stored and no call charges anyone on its own:
 
 | Tool | What it does |
 | --- | --- |
-| `generate_logo` | Generates a watermarked, low-resolution preview from a design brief, plus a checkout link priced at the Brandize service tiers (from $4.99). |
+| `generate_logo` | Generates a watermarked, low-resolution preview from a design brief, plus a checkout link for the tier the user picked. |
 | `buy_logo_variation` | Buys one of the alternates from `generate_logo_variations` instead of the original design. |
-| `get_logo_result` | Polls a job by its `jobToken`. Once payment settles, returns a download URL for the full-resolution, watermark-free deliverable (PNG, vector SVG, commercial license). |
+| `get_logo_result` | Polls a job by its `jobToken`. Once payment settles, returns a download URL for the tier's full deliverable. |
 
 `generate_logo` asks the calling agent to collect a real brief — tier, style,
 colors, layout, surface, industry — and to take the user's explicit acceptance of
 the [Terms](https://brandize.me/legal/terms) and
 [Privacy Policy](https://brandize.me/legal/privacy) before it will generate.
+
+### Tiers
+
+The `tier` argument to `generate_logo` picks what gets delivered. Call
+`get_pricing_tiers` for the current prices and feature lists — they are set
+server-side, not hardcoded here.
+
+| Tier | Deliverable |
+| --- | --- |
+| `PREMIUM` | Full-resolution PNG, vector SVG, commercial license. |
+| `COMPLETE` | Adds alternate logo variations, assembled after payment. |
+| `BRAND_STARTER` | A brand kit: icon, horizontal, stacked, monochrome and knockout lockups, the full favicon package, a five-color palette, a font pairing, a print-ready business card PDF, and an HTML email signature. |
+| `BRAND_KIT` | Everything in Brand Starter, plus a social media kit across five platforms, a brand guidelines PDF, a letterhead template, an Open Graph image, and iOS/Android/PWA app icons. |
+
+The brand-kit tiers have fixed deliverables — `generate_logo_variations` refuses
+on a purchased one. Only `COMPLETE` accepts more alternates after payment.
 
 ### A paid run, end to end
 
