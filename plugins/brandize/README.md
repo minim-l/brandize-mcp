@@ -6,14 +6,14 @@ Connects Claude Code or Codex to the hosted Brandize MCP server at
 **Claude Code**
 
 ```shell
-/plugin marketplace add muddi900/brandize-mcp
+/plugin marketplace add minim-l/brandize-mcp
 /plugin install brandize@brandize
 ```
 
 **Codex**
 
 ```shell
-codex plugin marketplace add muddi900/brandize-mcp
+codex plugin marketplace add minim-l/brandize-mcp
 codex plugin add brandize@brandize
 ```
 

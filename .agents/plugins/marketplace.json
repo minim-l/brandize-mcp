@@ -8,7 +8,7 @@
       "name": "brandize",
       "source": {
         "source": "git-subdir",
-        "url": "https://github.com/muddi900/brandize-mcp.git",
+        "url": "https://github.com/minim-l/brandize-mcp.git",
         "path": "./plugins/brandize",
         "ref": "main"
       },
