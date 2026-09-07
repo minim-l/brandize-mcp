@@ -16,7 +16,7 @@ There is nothing to install. The server is remote and runs over streamable HTTP:
 | Docs | <https://brandize.me/mcp> |
 | Machine-readable site docs | <https://brandize.me/llms.txt> |
 
-This repository holds the documentation and the Claude Code plugin
+This repository holds the documentation and the Claude Code and Codex plugin
 ([`plugins/brandize`](./plugins/brandize)) — the server itself is part of the
 Brandize application. Issues and questions about the MCP surface belong here.
 
@@ -28,6 +28,14 @@ Brandize application. Issues and questions about the MCP surface belong here.
 /plugin marketplace add muddi900/brandize-mcp
 /plugin install brandize@brandize
 ```
+
+**Codex — plugin**
+
+```shell
+codex plugin marketplace add muddi900/brandize-mcp
+```
+
+Then install `brandize` from `/plugins`.
 
 **Claude Code — CLI**
 

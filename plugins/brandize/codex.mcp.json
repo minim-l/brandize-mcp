@@ -1,0 +1,7 @@
+{
+  "mcp_servers": {
+    "brandize": {
+      "url": "https://brandize.me/api/mcp"
+    }
+  }
+}
