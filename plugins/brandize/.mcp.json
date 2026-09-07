@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "brandize": {
+      "type": "http",
+      "url": "https://brandize.me/api/mcp"
+    }
+  }
+}
