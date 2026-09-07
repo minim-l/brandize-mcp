@@ -33,9 +33,10 @@ Brandize application. Issues and questions about the MCP surface belong here.
 
 ```shell
 codex plugin marketplace add muddi900/brandize-mcp
+codex plugin add brandize@brandize
 ```
 
-Then install `brandize` from `/plugins`.
+Or install `brandize` from `/plugins` inside Codex.
 
 **Claude Code — CLI**
 

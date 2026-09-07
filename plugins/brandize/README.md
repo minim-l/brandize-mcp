@@ -14,9 +14,10 @@ Connects Claude Code or Codex to the hosted Brandize MCP server at
 
 ```shell
 codex plugin marketplace add muddi900/brandize-mcp
+codex plugin add brandize@brandize
 ```
 
-Then install `brandize` from `/plugins`.
+Or install `brandize` from `/plugins` inside Codex.
 
 That is the whole plugin: a remote MCP server declaration. Nothing runs locally,
 and there is no key to paste — the free tools are anonymous and rate-limited.
