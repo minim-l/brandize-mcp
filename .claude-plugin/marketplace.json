@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "brandize",
+  "description": "Brandize plugins for Claude Code — logo generation, brand kits, and SEO markup over the hosted MCP server.",
+  "owner": {
+    "name": "Brandize",
+    "url": "https://brandize.me"
+  },
+  "plugins": [
+    {
+      "name": "brandize",
+      "source": "./plugins/brandize",
+      "displayName": "Brandize",
+      "description": "AI logo generation, brand color palettes, SEO meta tags, JSON-LD schema markup, and blog search.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Brandize",
+        "url": "https://brandize.me"
+      },
+      "homepage": "https://brandize.me/mcp",
+      "repository": "https://github.com/muddi900/brandize-mcp",
+      "category": "design",
+      "keywords": [
+        "logo",
+        "logo generator",
+        "branding",
+        "brand kit",
+        "color palette",
+        "favicon",
+        "design",
+        "seo",
+        "meta tags",
+        "schema markup"
+      ]
+    }
+  ]
+}
